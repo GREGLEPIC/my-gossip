@@ -1,0 +1,6 @@
+<div class="jumbotron">
+  <h1 class="display-4">Heureux de te revoir <%= @user.first_name%> <%= @user.last_name%> </h1>
+  <hr class="my-4">
+  <p>Si tu veux voir la liste des potins, clique sur le bouton ci-dessous</p>
+  <a class="btn btn-primary btn-lg" <%= link_to 'Home', root_path %></a>
+</div>

@@ -1,0 +1,10 @@
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"> <%= @gossip.title%> </h5>
+    <p class="card-text"> <%= @gossip.content%> </p>
+    <p class="card-text"> <%= @gossip.user.first_name%> <%= @gossip.user.last_name%> </p>
+    <p class="card-text"> <%= @gossip.created_at%> </p>
+    <a class="btn btn-primary"> <%= link_to "Page de l'autheur", "user/#{@gossip.user.id}" %> </a>
+  </div>
+</div>
