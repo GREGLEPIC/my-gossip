@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   get '/gossip/:id', to: 'dynamic#show'
   get '/gossip/user/:id', to: 'dynamic#user'
 
+  resources :gossips, only: [:new, :create]
+
 end

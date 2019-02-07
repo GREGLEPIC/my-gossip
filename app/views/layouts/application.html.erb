@@ -28,11 +28,15 @@
         <a class="nav-link" <%= link_to "Contact", contact_path %></a>
       </li>
     </ul>
-    <span class="navbar-text">
-      Create a new Gossip
+    <a class="nav-link" <%= link_to "Create a new Gossip", new_gossip_path %></a>
     </span>
   </div>
 </nav>
+
+
+<% flash.each do |key, value| %>
+  <div class="alert alert-<%= key %>"><%= value %></div>
+<% end %>
 
     <%= yield %>
 
