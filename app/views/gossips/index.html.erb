@@ -1,0 +1,20 @@
+<h1 class="card w-75 div-center mb-3 mx-auto mt-5 text-center"> Bienvenue sur le site de Gossip !  </h1>
+
+<p class="card w-75 div-center mb-3 mx-auto mt-5 text-center"> Voici la liste de tous les goosips de THP : <p>
+
+
+<% @gossip.each do |f| %>
+
+<div class="card w-75 div-center mb-3 mx-auto mt-5 text-center">
+  <div class="card-body" >
+    <h5 class="card-title"> <%= f.user.first_name %> <%= f.user.last_name %>  </h5>
+    <p class="card-text">  <%= f.title %> </p>
+    <a href="<%= gossip_path(f.id) %>" class="btn btn-primary"> Voir le gossip</a>
+    <br></br>
+    <a href="<%= edit_gossip_path(f.id) %>" class="btn btn-primary"> Editer le gossip</a>
+    <br></br>
+    <a href="<%= gossip_path(f.id) %>" class="btn btn-danger" data-confirm="Etes-vous sur?" data-method="DELETE">Supprimer le gossip</a>
+  </div>
+</div>
+
+<%end%> 

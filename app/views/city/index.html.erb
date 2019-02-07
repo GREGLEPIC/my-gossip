@@ -1,0 +1,14 @@
+<h1 class="card w-75 div-center mb-3 mx-auto mt-5 text-center"> Voici la liste de toutes les villes :  </h1>
+
+
+<% @city.each do |c| %>
+
+<div class="card w-75 div-center mb-3 mx-auto mt-5 text-center">
+  <div class="card-body" >
+    <h5 class="card-title"> <%= c.name %> </h5>
+    <p class="card-text">  <%= c.zip_code %> </p>
+    <a class="btn btn-primary"> <%= link_to "Liste des gossips", root_path %> </a>
+  </div>
+</div>
+
+<%end%> 

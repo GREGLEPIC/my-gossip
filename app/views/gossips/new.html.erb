@@ -2,6 +2,7 @@
   <body>
     <!-- ... -->
 
+    <div class="container card text-center text-white bg-dark mb-3 mx-auto mt-5" style="width: 400px;">
     <%= form_tag url_for(action: 'create'), method: "post" do %>
 
       <%= label_tag 'Title' %>
@@ -17,7 +18,7 @@
       <%= submit_tag "Créer un Gossip ! " %>
 
     <% end %>
-
+</div>
     <!-- ... -->
   </body>
 </html>
